@@ -1,10 +1,33 @@
-* ,h1,::after,::before{
+*,
+h1,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
 
+header {
+  background: red;
+  padding: 1em;
+}
+header select {
+  margin: auto;
+  display: block;
+}
+
+header h1,
+header select {
+  padding: 1em;
+}
+main {
+  background: green;
+}
 /* Utility classes */
 
 .text-center {
@@ -15,9 +38,7 @@
   font-size: clamp(0.5rem, 5vw, 1.5rem);
 }
 
-
 /* break point */
-
 
 @media (min-width: 768px) {
   body {
