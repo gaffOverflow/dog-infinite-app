@@ -26,7 +26,11 @@ function createBreedList(breedList) {
 }
 
 async function showBreedList(breed) {
-  if (breed !== "Choose A Dog Breed") {
+  if (breed == "Choose A Dog Breed") {
+    document.getElementById(
+      "slideShow"
+    ).innerHTML = ` <div class="slide" style="background-image: url('./img/HdDog.jpg');">  </div>`;
+  } else {
     const response = await fetch(`https://dog.ceo/api/breed/${breed}/images
 `);
     const data = await response.json();
