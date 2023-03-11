@@ -7,18 +7,34 @@ h1,
   box-sizing: border-box;
 }
 
-body {
+/* Utility Classes */
+
+.text-responsive {
+  font-size: clamp(0.5rem, 5vw, 1.5rem);
+}
+
+/* Utility Classes End Point*/
+
+.app {
   display: grid;
   grid-template-rows: auto 1fr;
+  height: 100svh;
+  width: 100svw;
 }
 
 header {
   background: red;
   padding: 1em;
+  text-align: center;
 }
+
 header select {
-  margin: auto;
-  display: block;
+  border-radius: 5px;
+  text-align: center;
+}
+
+header select option {
+  font-size: 0.6rem;
 }
 
 header h1,
@@ -26,16 +42,25 @@ header select {
   padding: 1em;
 }
 main {
-  background: green;
-}
-/* Utility classes */
-
-.text-center {
-  text-align: center;
+  background: grey;
+  position: relative;
+  overflow: hidden;
 }
 
-.text-responsive {
-  font-size: clamp(0.5rem, 5vw, 1.5rem);
+.slide {
+  position: absolute;
+  inset: 0 0 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1);
+  transition: all .9s ease-out;
+}
+
+.slide:nth-last-child(2){
+opacity: 1;
+transform: scale(1.08);
 }
 
 /* break point */
