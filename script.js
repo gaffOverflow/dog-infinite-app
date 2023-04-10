@@ -27,6 +27,8 @@ function createBreedList(breedList) {
 
 async function showBreedList(breed) {
   if (breed == "Choose A Dog Breed") {
+    // const show = document.querySelector(".show")
+    // show.style.display = "none"
     document.getElementById(
       "slideShow"
     ).innerHTML = ` <div class="slide" style="background-image: url('./img/HdDog.jpg');">  </div>`;
